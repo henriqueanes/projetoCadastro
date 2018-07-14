@@ -12,10 +12,10 @@ import com.fabricah.projetoCadastro.repositories.CategoriaRepository;
 public class CategoriaService {
 	
 	@Autowired
-	private CategoriaRepository repo;
+	private CategoriaRepository categoriaRepo;
 	
 	public Categoria buscar(Integer id) {
-		Optional<Categoria> cat = repo.findById(id);
+		Optional<Categoria> cat = categoriaRepo.findById(id);
 		
 		return cat.orElse(null);
 	}
